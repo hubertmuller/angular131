@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StopkaComponent } from './stopka/stopka.component';
 import { NaglowekComponent } from './naglowek/naglowek.component';
+import { ListaComponent } from './lista/lista.component';
+import { FormularzComponent } from './formularz/formularz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StopkaComponent,
-    NaglowekComponent
+    NaglowekComponent,
+    ListaComponent,
+    FormularzComponent
   ],
   imports: [
     BrowserModule,
