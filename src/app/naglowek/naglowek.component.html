@@ -1,9 +1,14 @@
-<h1>naglowek dziala</h1>
+<h1>Witaj na stronie</h1>
 
-<p>wartosc pola publicznego wynosi "{{ nazwa }}"</p>
-<p>wynik {{ dodaj(liczba1, liczba2) }}</p>
+<div class="fragmentTestowy">
+    <p>wartosc pola publicznego wynosi "{{ nazwa }}"</p>
+    <p>wynik {{ dodaj(liczba1, liczba2) }}</p>
 
-{{ getTajne() }}
+    {{ getTajne() }}
+</div>
 
-<a [routerLink]="['/lista']">Lista</a>
-<a [routerLink]="['/formularz']">Formularz</a>
+<nav>
+    <a [routerLink]="['/lista']">Lista</a>
+    <a [routerLink]="['/formularz']">Formularz</a>
+    <a [routerLink]="['/kontakt']">Kontakt</a>
+</nav>

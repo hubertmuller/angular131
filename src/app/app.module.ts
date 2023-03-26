@@ -7,6 +7,8 @@ import { StopkaComponent } from './stopka/stopka.component';
 import { NaglowekComponent } from './naglowek/naglowek.component';
 import { ListaComponent } from './lista/lista.component';
 import { FormularzComponent } from './formularz/formularz.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { SuffixPipe } from './suffix.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FormularzComponent } from './formularz/formularz.component';
     StopkaComponent,
     NaglowekComponent,
     ListaComponent,
-    FormularzComponent
+    FormularzComponent,
+    KontaktComponent,
+    SuffixPipe
   ],
   imports: [
     BrowserModule,

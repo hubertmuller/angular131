@@ -17,7 +17,7 @@ export class NaglowekComponent {
   @Input()
   public liczba2 = 0;
 
-  constructor(private logika: LogikaService) {
+  constructor(private logika: LogikaService, ) {
     console.log('wywolano konstruktor naglowka');
     //this.logika.dodawanie(1,2);
   }

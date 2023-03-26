@@ -1,0 +1,14 @@
+$bazowyMargines: 8px;
+$kolorTlaLinka: rgb(255,0,0);
+$kolorLinka: #fff;
+
+$kolorTekstuZwykly: #00f;
+
+@mixin obwodkaBloku {
+    border: 1px solid $kolorTekstuZwykly;
+    padding: $bazowyMargines/1.5;
+}
+
+@function zwieksz($wartosc, $wsp) {
+    @return $wartosc + $wsp;
+}

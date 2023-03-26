@@ -1,3 +1,32 @@
+@import "../common-scss/common-vars.scss";
+
 h1 {
-    color: black;
+    color: $kolorTekstuZwykly;
+}
+
+/*
+nav {
+    margin: 16px;
+}
+
+nav > a {
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    background-color: red;
+}
+*/
+
+nav {
+    margin: zwieksz($bazowyMargines * 3, 4);
+    > a {
+        padding: $bazowyMargines;
+        margin: $bazowyMargines;
+        color: $kolorLinka;
+        background-color: $kolorTlaLinka; 
+    }
+}
+
+.fragmentTestowy {
+    @include obwodkaBloku
 }
