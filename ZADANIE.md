@@ -13,7 +13,7 @@ tlumaczenia = [
 let el = tlumaczenia.find( (el) => {return el.k == value });
 return el[args[0]];
 
-2. Dodaj do serwisu logika metode tlumaczaca o podobnej jak pipe tlymacz funkcjonalnosci
+2. Dodaj do serwisu logika metode tlumaczaca o podobnej jak pipe tlumacz funkcjonalnosci
 
 tlumacz (klucz,jezyk)
 
