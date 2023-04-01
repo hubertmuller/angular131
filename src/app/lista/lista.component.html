@@ -1,7 +1,5 @@
-<p>lista works!</p>
-
-<div *ngIf="dane.length == 0"> Ładowanie danych w toku...</div>
-<table *ngIf="dane.length > 0"><!--mozna uzyc saDane -->
+<div *ngIf="!dane"> Ładowanie danych w toku...</div>
+<table *ngIf="dane"><!--mozna uzyc saDane -->
     <tr>
         <th>Kraj</th>
         <th>Populacja</th>

@@ -9,7 +9,7 @@ import { DaneService } from '../dane.service';
 })
 export class ListaComponent implements OnDestroy{
   public daneObs: Observable<Populacja[]>;
-  public dane: Populacja[] = [];
+  public dane!: Populacja[];
   //public saDane = false;
   private daneObsSub: Subscription;
 

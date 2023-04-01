@@ -18,10 +18,11 @@ nav > a {
 */
 
 nav {
-    margin: zwieksz($bazowyMargines * 3, 4);
+    margin: zwieksz($bazowyMargines * 3, 4) 0;
     > a {
+        display: inline-block;
         padding: $bazowyMargines;
-        margin: $bazowyMargines;
+        margin-right: $bazowyMargines;
         color: $kolorLinka;
         background-color: $kolorTlaLinka; 
     }
