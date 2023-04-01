@@ -14,11 +14,11 @@
         </div>
     </div>
 
-    <div>
+    <div *ngIf="!schowajPoczestunek">
         <div class="et">
             Poczęstunek:
         </div>
-        <div class="da" [formGroup]="forma.controls.poczestunek">
+        <div  class="da" [formGroup]="forma.controls.poczestunek">
             <label for="kawaEl">Kawa</label>
             <input formControlName="kawa" id="kawaEl" name="poczestunek" type="checkbox" value="k">
             <label for="herbataEl">Herbata</label>
@@ -67,4 +67,14 @@
             <input type="submit" value="Wyslij">
         </div>
     </div>
+
+    <div>
+        <div class="et">
+            
+        </div>
+        <div class="da">
+            <input (click)="zmien()" type="button" value="Zmien">
+        </div>
+    </div>
+
 </form>

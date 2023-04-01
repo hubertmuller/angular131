@@ -33,7 +33,7 @@ input[type="text"], select, textarea {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="button"] {
     color: black;
     padding: 5px;
     width: 50%;
