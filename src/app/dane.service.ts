@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Populacja } from './lista/lista.component';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,12 @@ export class DaneService {
     {nazwa: 'USA', populacja: 332000000, przyrost: 0.72}
   ];
 
+
   //https://6427f2e8161067a83b03da40.mockapi.io/ludnosc
   pobierzPopulacje(): Populacja[] {
+    
     return this.dane;
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
