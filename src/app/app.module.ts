@@ -10,6 +10,7 @@ import { FormularzComponent } from './formularz/formularz.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { SuffixPipe } from './suffix.pipe';
 import { TlumaczPipe } from './tlumacz.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TlumaczPipe } from './tlumacz.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

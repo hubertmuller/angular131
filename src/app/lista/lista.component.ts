@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { DaneService } from '../dane.service';
 
 @Component({
@@ -7,10 +8,14 @@ import { DaneService } from '../dane.service';
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent {
-  public dane: Populacja[];
+  public daneObs: Observable<Populacja[]>;
+  public dane: Populacja[] = [];
 
   constructor(private daneService: DaneService) {
-    this.dane = this.daneService.pobierzPopulacje();
+    this.daneObs = this.daneService.pobierzPopulacje();
+    this.daneObs.subscribe( (wartosc) => {
+      this.dane = wartosc;
+    } );
   }
 }
 
