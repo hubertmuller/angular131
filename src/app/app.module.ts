@@ -9,6 +9,7 @@ import { ListaComponent } from './lista/lista.component';
 import { FormularzComponent } from './formularz/formularz.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { SuffixPipe } from './suffix.pipe';
+import { TlumaczPipe } from './tlumacz.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SuffixPipe } from './suffix.pipe';
     ListaComponent,
     FormularzComponent,
     KontaktComponent,
-    SuffixPipe
+    SuffixPipe,
+    TlumaczPipe
   ],
   imports: [
     BrowserModule,
