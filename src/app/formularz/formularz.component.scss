@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+form.pierwszy > div {
+    font-size: 0;
+}
+
+.et {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    font-size: 12pt;
+    padding: 5px;
+}
+
+.da {
+    display: inline-block;
+    width: 75%;
+    text-align: left;
+    font-size: 12pt;
+    padding: 5px;
+}
+
+input[type="text"], select, textarea {
+    background-color: rgb(179, 216, 255);
+    color: black;
+    padding: 5px;
+    border: 1px solid rgb(0, 94, 255);
+    width: 100%;
+    padding: 5px;
+    border: 1px dotted black;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    color: black;
+    padding: 5px;
+    width: 50%;
+    background-color: rgb(230, 159, 240);
+    border-radius: 5px;
+}
+
+.glownyGrid {
+    display: grid;
+    grid-template-columns: [lewa lewa-start] 
+                            40px [druga] 
+                            100px [ trzecia ]
+                            auto [przedost] 40px [prawa];
+}
+
+article.szosty {
+    grid-column: 1 / 3;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px [lewaGlowna] auto [prawaGlowna] 100px;
+    grid-template-rows: 100px [goraGlowna] auto [dolGlowny] 50px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.gornyWiersz {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    background-color: brown;
+}
+
+.dolnyWiersz {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    background-color: rgb(136, 165, 42);
+}
+
+.prawaSzpalta {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    background-color: rgb(208, 112, 9);
+    margin: 0;
+}
+
+.glownaSzpalta {
+    grid-row: goraGlowna / dolGlowny;
+    grid-column: lewaGlowna / prawaGlowna;
+    background-color: rgb(9, 208, 19);
+}
+
+form.siatka {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 200px  auto ;
+    row-gap: 20px;
+    padding: 5px;
+}

@@ -1,1 +1,65 @@
-<p>formularz works!</p>
+<form class="pierwszy" method="post" action="https://naszprzyszlyserwer/backend/api/zapisy">
+
+    <div>
+        <div class="et">
+            <label for="imieEl">Imię</label>
+        </div>
+        <div class="da">
+            <input id="imieEl" name="imie" type="text">
+        </div>
+    </div>
+
+    <div>
+        <div class="et">
+            Poczęstunek:
+        </div>
+        <div class="da">
+            <label for="kawaEl">Kawa</label>
+            <input id="kawaEl" name="poczestunek" type="checkbox" value="k">
+            <label for="herbataEl">Herbata</label>
+            <input id="herbataEl" name="poczestunek" type="checkbox" value="h">
+        </div>
+    </div>
+
+    <div>
+        <div class="et">
+            Płeć:
+        </div>
+        <div class="da">
+            <label for="kobietaEl">kobieta</label>
+            <input id="kobietaEl" name="plec" type="radio" value="k">
+            <label for="mezczyznaEl">mezczyzna</label>
+            <input id="mezczyznaEl" name="plec" type="radio" value="m">
+        </div>
+    </div>
+
+    <div>
+        <div class="et">
+            <label for="komentarzeEl">komentarze</label>
+        </div>
+        <div class="da">
+            <textarea id="komentarzeEl" name="komentarze"></textarea>
+        </div>
+    </div>
+
+    <div>
+        <div class="et">
+            <label for="dzieciEl">dzieci</label>
+        </div>
+        <div class="da">
+            <select id="dzieciEl" name="dzieci">
+                <option value="0">Brak</option>
+                <option value="1">Jedno lub wiecej</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <div class="et">
+            
+        </div>
+        <div class="da">
+            <input type="submit" value="Wyslij">
+        </div>
+    </div>
+</form>
