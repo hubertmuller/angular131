@@ -3,7 +3,7 @@
 </pre>
 
 
-<form [formGroup]="forma" class="pierwszy" method="post" action="https://naszprzyszlyserwer/backend/api/zapisy">
+<form id="f" [formGroup]="forma" class="pierwszy" method="post" action="https://naszprzyszlyserwer/backend/api/zapisy">
 
     <div>
         <div class="et">
@@ -11,6 +11,28 @@
         </div>
         <div class="da">
             <input id="imieEl" formControlName="imie" name="imie" type="text">
+        </div>
+    </div>
+
+    <div>
+        <div class="et">
+
+        </div>
+        <div class="da">
+            <div class="blad" *ngIf="forma.controls.imie.errors">
+                Wystapił błąd!
+                <span *ngIf="forma.controls.imie.errors['minlength']">
+                    Imie jest zbyt krotkie. Obecnie ma:
+                    {{ forma.controls.imie.errors['minlength'].actualLength }} znakow
+                    a powinno miec minimalnie {{ forma.controls.imie.errors['minlength'].requiredLength }} 
+                </span>
+                <span *ngIf="forma.controls.imie.errors['maxlength']">
+                    Imie jest zbyt długie. Obecnie ma: 
+                    {{ forma.controls.imie.errors['maxlength'].actualLength }} znakow
+                    a powinno miec maksymalnie {{ forma.controls.imie.errors['maxlength'].requiredLength }} 
+        
+                </span>
+            </div>
         </div>
     </div>
 

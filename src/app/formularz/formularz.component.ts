@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -14,7 +14,7 @@ export class FormularzComponent implements OnDestroy {
   public forma = new FormGroup( {
     imie: new FormControl(
       "Jan", 
-      {validators: [], updateOn: "change"} 
+      {validators: [Validators.minLength(3), Validators.maxLength(10)], updateOn: "change"} 
     ),
     poczestunek: new FormGroup( {
       kawa: new FormControl(false, {validators: [], updateOn: "change"}),

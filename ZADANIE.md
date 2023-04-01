@@ -1,4 +1,5 @@
 
+
 1. Stworz i wywolaj pipe tlumaczacy
 
 'komunikat.powitanie' | tlumacz : 'en'
