@@ -11,6 +11,7 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { SuffixPipe } from './suffix.pipe';
 import { TlumaczPipe } from './tlumacz.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

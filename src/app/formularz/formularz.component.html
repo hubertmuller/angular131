@@ -1,11 +1,16 @@
-<form class="pierwszy" method="post" action="https://naszprzyszlyserwer/backend/api/zapisy">
+<pre>
+{{forma.value | json}}
+</pre>
+
+
+<form [formGroup]="forma" class="pierwszy" method="post" action="https://naszprzyszlyserwer/backend/api/zapisy">
 
     <div>
         <div class="et">
             <label for="imieEl">Imię</label>
         </div>
         <div class="da">
-            <input id="imieEl" name="imie" type="text">
+            <input id="imieEl" formControlName="imie" name="imie" type="text">
         </div>
     </div>
 
@@ -13,11 +18,11 @@
         <div class="et">
             Poczęstunek:
         </div>
-        <div class="da">
+        <div class="da" [formGroup]="forma.controls.poczestunek">
             <label for="kawaEl">Kawa</label>
-            <input id="kawaEl" name="poczestunek" type="checkbox" value="k">
+            <input formControlName="kawa" id="kawaEl" name="poczestunek" type="checkbox" value="k">
             <label for="herbataEl">Herbata</label>
-            <input id="herbataEl" name="poczestunek" type="checkbox" value="h">
+            <input formControlName="herbata" id="herbataEl" name="poczestunek" type="checkbox" value="h">
         </div>
     </div>
 
@@ -27,18 +32,18 @@
         </div>
         <div class="da">
             <label for="kobietaEl">kobieta</label>
-            <input id="kobietaEl" name="plec" type="radio" value="k">
+            <input id="kobietaEl" formControlName="plec" name="plec" type="radio" value="k">
             <label for="mezczyznaEl">mezczyzna</label>
-            <input id="mezczyznaEl" name="plec" type="radio" value="m">
+            <input id="mezczyznaEl" formControlName="plec" name="plec" type="radio" value="m">
         </div>
     </div>
 
     <div>
         <div class="et">
-            <label for="komentarzeEl">komentarze</label>
+            <label for="komentarzeEl" >komentarze</label>
         </div>
         <div class="da">
-            <textarea id="komentarzeEl" name="komentarze"></textarea>
+            <textarea formControlName="komentarze" id="komentarzeEl" name="komentarze"></textarea>
         </div>
     </div>
 
@@ -47,7 +52,7 @@
             <label for="dzieciEl">dzieci</label>
         </div>
         <div class="da">
-            <select id="dzieciEl" name="dzieci">
+            <select id="dzieciEl" name="dzieci" formControlName="dzieci">
                 <option value="0">Brak</option>
                 <option value="1">Jedno lub wiecej</option>
             </select>
