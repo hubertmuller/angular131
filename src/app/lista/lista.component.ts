@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnDestroy } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { DaneService } from '../dane.service';
 
 @Component({
@@ -7,15 +7,23 @@ import { DaneService } from '../dane.service';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.scss']
 })
-export class ListaComponent {
+export class ListaComponent implements OnDestroy{
   public daneObs: Observable<Populacja[]>;
   public dane: Populacja[] = [];
+  //public saDane = false;
+  private daneObsSub: Subscription;
 
   constructor(private daneService: DaneService) {
     this.daneObs = this.daneService.pobierzPopulacje();
-    this.daneObs.subscribe( (wartosc) => {
+    this.daneObsSub = this.daneObs.subscribe( (wartosc) => {
       this.dane = wartosc;
+      //this.saDane = true;
     } );
+
+  }
+  ngOnDestroy(): void {
+    //konieczne dla observabli generujacych duzo wartosci. nie jest konieczne dla http.get
+    this.daneObsSub.unsubscribe();
   }
 }
 
