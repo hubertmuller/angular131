@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DaneService } from '../dane.service';
 
 @Component({
   selector: 'app-lista',
@@ -6,9 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent {
-  public tabela = [
-    {nazwa: 'Polska', populacja: 37000000},
-    {nazwa: 'Ukraina', populacja: 35300300},
-    {nazwa: 'USA', populacja: 332000000}
-  ];
+  public dane: Populacja[];
+
+  constructor(private daneService: DaneService) {
+    this.dane = this.daneService.pobierzPopulacje();
+  }
+}
+
+export interface Populacja {
+  nazwa: string;
+  populacja: number;
+  przyrost: number;
 }

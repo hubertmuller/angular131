@@ -1,7 +1,25 @@
 <p>lista works!</p>
 
-<pre>
-{{ tabela | json}}
-</pre>
 
-Polska: {{tabela[0].populacja | suffix : ' ludzi'}}
+<table>
+    <tr>
+        <th>Kraj</th>
+        <th>Populacja</th>
+        <th>Przyrost naturalny</th>
+    </tr>
+    <tr *ngFor="let panstwo of dane">
+        <td>{{panstwo.nazwa}}</td>
+        <td>{{panstwo.populacja}}</td>
+        <td>{{panstwo.przyrost}}</td>
+    </tr>
+</table>
+
+
+
+
+
+<!--pre>
+{{ dane | json}}
+</pre-->
+
+Polska: {{dane[0].populacja | suffix : ' ludzi'}}

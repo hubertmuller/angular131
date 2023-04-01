@@ -21,7 +21,7 @@ export class TlumaczPipe implements PipeTransform {
     {k: 'komunikat.pozegnanie', en: 'Bye', pl: 'Zegnaj'}
   ];
 
-  transform(value: string, jezyk: 'pl' | 'en' = 'en'): unknown {
+  transform(value: string, jezyk: 'pl' | 'en' = 'en'): string {
     const znaleziony = this.tlumaczenia.find( (element) => { 
       if (element.k == value) {
         return true;
